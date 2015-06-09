@@ -26,13 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         case "iPhone", "iPod Touch", "iPhone Simulator" :
             
-            println("controller")
+//            println("controller")
             let storyboard = UIStoryboard(name: "iPhoneMain", bundle: nil)
             window?.rootViewController = storyboard.instantiateInitialViewController() as? UIViewController
             
         case "iPad", "iPad Simulator" :
             
-            println("game view")
+//            println("game view")
             let storyboard = UIStoryboard(name: "iPadMain", bundle: nil)
              window?.rootViewController = storyboard.instantiateInitialViewController() as? UIViewController
             

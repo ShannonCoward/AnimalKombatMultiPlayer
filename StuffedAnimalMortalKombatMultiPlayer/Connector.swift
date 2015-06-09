@@ -9,7 +9,7 @@
 import UIKit
 import MultipeerConnectivity
 
-private let serviceType = "StuffedAnimalMortalKombat"
+private let serviceType = "SAMK"
 
 private let _singleton = Connector()
 
@@ -48,6 +48,7 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
         session?.delegate = self
         
         advertiser = MCNearbyServiceAdvertiser(peer: myPeerID, discoveryInfo: myInfo, serviceType: serviceType)
+        advertiser?.delegate = self
         
         advertiser?.startAdvertisingPeer()
     }
@@ -55,15 +56,26 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
     
     func browser(browser: MCNearbyServiceBrowser!, foundPeer peerID: MCPeerID!, withDiscoveryInfo info: [NSObject : AnyObject]!) {
         
+            println("found" + peerID.displayName)
+            println("found \(info)")
+        
+        browser.invitePeer(peerID, toSession: session, withContext: nil, timeout: 30)
+        
     }
     
     
     func browser(browser: MCNearbyServiceBrowser!, lostPeer peerID: MCPeerID!) {
         
+         println("lost " + peerID.displayName)
+        
     }
     //////////// MARK: ADVERTISER DELEGATE ///////////
     
     func advertiser(advertiser: MCNearbyServiceAdvertiser!, didReceiveInvitationFromPeer peerID: MCPeerID!, withContext context: NSData!, invitationHandler: ((Bool, MCSession!) -> Void)!) {
+        
+         println("invitation from " + peerID.displayName)
+        
+        invitationHandler(true,session)
         
     }
     
@@ -88,7 +100,15 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
     
     func session(session: MCSession!, peer peerID: MCPeerID!, didChangeState state: MCSessionState) {
         
+        let stateArray = [
         
+            "Not Connected",
+            "Connecting",
+            "Connected"
+        
+        ]
+        
+        println("\(stateArray[state.rawValue]) to " + peerID.displayName)
     }
     
 }
