@@ -51,6 +51,8 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
         advertiser?.delegate = self
         
         advertiser?.startAdvertisingPeer()
+        
+        
     }
     //////////// MARK: BROWSER DELEGATE
     
@@ -66,7 +68,9 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
     
     func browser(browser: MCNearbyServiceBrowser!, lostPeer peerID: MCPeerID!) {
         
-         println("lost " + peerID.displayName)
+        myPeerID = MCPeerID(displayName: "lost " + peerID.displayName)
+        
+        myPeerID.textLabel = 
         
     }
     //////////// MARK: ADVERTISER DELEGATE ///////////
