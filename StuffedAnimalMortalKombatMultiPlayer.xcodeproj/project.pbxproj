@@ -18,6 +18,13 @@
 		04DB17071B272C6600FCA436 /* iPhoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DB17051B272C6600FCA436 /* iPhoneMain.storyboard */; };
 		04DB170C1B273B8000FCA436 /* UserControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB170B1B273B8000FCA436 /* UserControllerViewController.swift */; };
 		04DB170E1B273C6900FCA436 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB170D1B273C6900FCA436 /* Connector.swift */; };
+		04DB17111B278F4700FCA436 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DB17101B278F4700FCA436 /* button.png */; };
+		04DB17171B27A14900FCA436 /* d-pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DB17121B27A14900FCA436 /* d-pad.png */; };
+		04DB17181B27A14900FCA436 /* dpadDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DB17131B27A14900FCA436 /* dpadDown.png */; };
+		04DB17191B27A14900FCA436 /* dpadLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DB17141B27A14900FCA436 /* dpadLeft.png */; };
+		04DB171A1B27A14900FCA436 /* dpadMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DB17151B27A14900FCA436 /* dpadMiddle.png */; };
+		04DB171B1B27A14900FCA436 /* dPadRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DB17161B27A14900FCA436 /* dPadRight.png */; };
+		04DB171D1B27A27A00FCA436 /* upDPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DB171C1B27A27A00FCA436 /* upDPad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,13 @@
 		04DB17061B272C6600FCA436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhoneMain.storyboard; sourceTree = "<group>"; };
 		04DB170B1B273B8000FCA436 /* UserControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserControllerViewController.swift; sourceTree = "<group>"; };
 		04DB170D1B273C6900FCA436 /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
+		04DB17101B278F4700FCA436 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		04DB17121B27A14900FCA436 /* d-pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "d-pad.png"; sourceTree = "<group>"; };
+		04DB17131B27A14900FCA436 /* dpadDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpadDown.png; sourceTree = "<group>"; };
+		04DB17141B27A14900FCA436 /* dpadLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpadLeft.png; sourceTree = "<group>"; };
+		04DB17151B27A14900FCA436 /* dpadMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpadMiddle.png; sourceTree = "<group>"; };
+		04DB17161B27A14900FCA436 /* dPadRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dPadRight.png; sourceTree = "<group>"; };
+		04DB171C1B27A27A00FCA436 /* upDPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upDPad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,10 +103,11 @@
 			children = (
 				04DB170F1B273C7800FCA436 /* Random */,
 				04DB16E91B2729D300FCA436 /* iPadMain.storyboard */,
+				04DB170D1B273C6900FCA436 /* Connector.swift */,
 				04DB16E71B2729D300FCA436 /* GameViewController.swift */,
 				04DB170A1B273B2D00FCA436 /* Game */,
-				04DB170B1B273B8000FCA436 /* UserControllerViewController.swift */,
 				04DB17051B272C6600FCA436 /* iPhoneMain.storyboard */,
+				04DB170B1B273B8000FCA436 /* UserControllerViewController.swift */,
 				04DB16DF1B2729D200FCA436 /* Supporting Files */,
 			);
 			path = StuffedAnimalMortalKombatMultiPlayer;
@@ -101,6 +116,13 @@
 		04DB16DF1B2729D200FCA436 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04DB17121B27A14900FCA436 /* d-pad.png */,
+				04DB171C1B27A27A00FCA436 /* upDPad.png */,
+				04DB17131B27A14900FCA436 /* dpadDown.png */,
+				04DB17141B27A14900FCA436 /* dpadLeft.png */,
+				04DB17151B27A14900FCA436 /* dpadMiddle.png */,
+				04DB17161B27A14900FCA436 /* dPadRight.png */,
+				04DB17101B278F4700FCA436 /* button.png */,
 				04DB16E11B2729D200FCA436 /* AppDelegate.swift */,
 				04DB16EE1B2729D300FCA436 /* LaunchScreen.xib */,
 				04DB16EC1B2729D300FCA436 /* Images.xcassets */,
@@ -138,7 +160,6 @@
 		04DB170F1B273C7800FCA436 /* Random */ = {
 			isa = PBXGroup;
 			children = (
-				04DB170D1B273C6900FCA436 /* Connector.swift */,
 			);
 			name = Random;
 			sourceTree = "<group>";
@@ -223,11 +244,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DB17181B27A14900FCA436 /* dpadDown.png in Resources */,
 				04DB16F01B2729D300FCA436 /* LaunchScreen.xib in Resources */,
+				04DB17191B27A14900FCA436 /* dpadLeft.png in Resources */,
+				04DB171D1B27A27A00FCA436 /* upDPad.png in Resources */,
+				04DB17111B278F4700FCA436 /* button.png in Resources */,
+				04DB17171B27A14900FCA436 /* d-pad.png in Resources */,
 				04DB16ED1B2729D300FCA436 /* Images.xcassets in Resources */,
 				04DB16E41B2729D300FCA436 /* GameScene.sks in Resources */,
+				04DB171A1B27A14900FCA436 /* dpadMiddle.png in Resources */,
 				04DB16EB1B2729D300FCA436 /* iPadMain.storyboard in Resources */,
 				04DB17071B272C6600FCA436 /* iPhoneMain.storyboard in Resources */,
+				04DB171B1B27A14900FCA436 /* dPadRight.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +417,7 @@
 				INFOPLIST_FILE = StuffedAnimalMortalKombatMultiPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -400,7 +428,7 @@
 				INFOPLIST_FILE = StuffedAnimalMortalKombatMultiPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
