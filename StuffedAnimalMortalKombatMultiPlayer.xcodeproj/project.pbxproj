@@ -18,6 +18,7 @@
 		04DB17071B272C6600FCA436 /* iPhoneMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DB17051B272C6600FCA436 /* iPhoneMain.storyboard */; };
 		04DB170C1B273B8000FCA436 /* UserControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB170B1B273B8000FCA436 /* UserControllerViewController.swift */; };
 		04DB170E1B273C6900FCA436 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB170D1B273C6900FCA436 /* Connector.swift */; };
+		04DB17201B2873B200FCA436 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB171F1B2873B200FCA436 /* Avatar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		04DB17061B272C6600FCA436 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/iPhoneMain.storyboard; sourceTree = "<group>"; };
 		04DB170B1B273B8000FCA436 /* UserControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserControllerViewController.swift; sourceTree = "<group>"; };
 		04DB170D1B273C6900FCA436 /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
+		04DB171F1B2873B200FCA436 /* Avatar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +93,7 @@
 				04DB16E91B2729D300FCA436 /* iPadMain.storyboard */,
 				04DB16E71B2729D300FCA436 /* GameViewController.swift */,
 				04DB170A1B273B2D00FCA436 /* Game */,
-				04DB170B1B273B8000FCA436 /* UserControllerViewController.swift */,
+				04DB171E1B28737900FCA436 /* Controller */,
 				04DB17051B272C6600FCA436 /* iPhoneMain.storyboard */,
 				04DB16DF1B2729D200FCA436 /* Supporting Files */,
 			);
@@ -141,6 +143,15 @@
 				04DB170D1B273C6900FCA436 /* Connector.swift */,
 			);
 			name = Random;
+			sourceTree = "<group>";
+		};
+		04DB171E1B28737900FCA436 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				04DB170B1B273B8000FCA436 /* UserControllerViewController.swift */,
+				04DB171F1B2873B200FCA436 /* Avatar.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DB17201B2873B200FCA436 /* Avatar.swift in Sources */,
 				04DB16E61B2729D300FCA436 /* GameScene.swift in Sources */,
 				04DB16E81B2729D300FCA436 /* GameViewController.swift in Sources */,
 				04DB16E21B2729D200FCA436 /* AppDelegate.swift in Sources */,

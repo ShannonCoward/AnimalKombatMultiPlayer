@@ -59,6 +59,7 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
             println("found" + peerID.displayName)
             println("found \(info)")
         
+        //INVITING THE PPER
         browser.invitePeer(peerID, toSession: session, withContext: nil, timeout: 30)
         
     }
@@ -75,6 +76,7 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
         
          println("invitation from " + peerID.displayName)
         
+        // ACCEPTING INVITE
         invitationHandler(true,session)
         
     }
