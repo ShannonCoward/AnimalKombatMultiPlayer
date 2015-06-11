@@ -13,7 +13,9 @@ class UserControllerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        Connector.sharedConnector().contorller = self
         Connector.sharedConnector().startAdvertising()
+        
         // Do any additional setup after loading the view.
     }
 

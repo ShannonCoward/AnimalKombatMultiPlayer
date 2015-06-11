@@ -84,7 +84,30 @@ import UIKit
         addDotAtDegrees(degrees, withColor: healthColor, andContext: context)
         addDotAtDegrees(135, withColor: healthColor, andContext: context)
         
-        // ADD CURRENT ENERGY
+         // ADD CURRENT ENERGY
+        
+        CGContextSetBlendMode(context, kCGBlendModeSourceIn)
+        
+         energyColor.set()
+        
+        let  oppoDegrees = Double(45 - ((energyPoints / 100) * 90))
+        let oppoAngle = CGFloat(DegreesToRadians(oppoDegrees))
+        
+        
+        let newX = (rect.width / 2) + (rect.width) * cos(oppoAngle)
+        let newY = (rect.height / 2) + (rect.height) * sin(oppoAngle)
+        
+        CGContextMoveToPoint(context, newX, newY);
+        CGContextAddLineToPoint(context, rect.width / 2, rect.height / 2)
+        CGContextAddLineToPoint(context, rect.width, rect.height)
+        CGContextFillPath(context)
+        
+        
+        addDotAtDegrees(degrees, withColor: energyColor, andContext: context)
+        addDotAtDegrees(135, withColor: energyColor, andContext: context)
+        
+        
+        
         
         CGContextSetBlendMode(context, kCGBlendModeNormal)
         
@@ -102,8 +125,9 @@ import UIKit
     
     let angle = CGFloat(DegreesToRadians(degrees))
     
-    let x = (bounds.width / 2) + (bounds.width / 2 - 5) * cos(angle)
-    let y = (bounds.height / 2) + (bounds.height / 2 - 5) * sin(angle)
+        let x = ((bounds.width / 2) + (bounds.width / 2 - 5) * cos(angle))
+        let y = ((bounds.height / 2) + (bounds.height / 2 - 5) * sin(angle))
+
     
     println("x \(x) y \(y)")
     
@@ -115,15 +139,9 @@ import UIKit
         
     CGContextStrokePath(context)
     
-    
     }
     
 }
-
-    func DegreesToRadians (value:Double) -> Double {
-        return value * M_PI / 180.0
-    
-    }
 
 
 //        var cirlcePath = UIBezierPath(ovalInRect: barRect)

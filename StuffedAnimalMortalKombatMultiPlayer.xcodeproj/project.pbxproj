@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04020E491B29C35200FDD35A /* MoveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04020E481B29C35200FDD35A /* MoveButton.swift */; };
+		04020E4B1B29C7E500FDD35A /* PawIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 04020E4A1B29C7E500FDD35A /* PawIcon.png */; };
+		04020E4D1B29D14500FDD35A /* PawButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04020E4C1B29D14500FDD35A /* PawButton.swift */; };
+		04020E4F1B29E0EE00FDD35A /* cloud_floor.png in Resources */ = {isa = PBXBuildFile; fileRef = 04020E4E1B29E0EE00FDD35A /* cloud_floor.png */; };
+		04020E511B29EC4600FDD35A /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04020E501B29EC4600FDD35A /* Functions.swift */; };
 		04DB16E21B2729D200FCA436 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB16E11B2729D200FCA436 /* AppDelegate.swift */; };
 		04DB16E41B2729D300FCA436 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04DB16E31B2729D300FCA436 /* GameScene.sks */; };
 		04DB16E61B2729D300FCA436 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DB16E51B2729D300FCA436 /* GameScene.swift */; };
@@ -32,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04020E481B29C35200FDD35A /* MoveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveButton.swift; sourceTree = "<group>"; };
+		04020E4A1B29C7E500FDD35A /* PawIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PawIcon.png; sourceTree = "<group>"; };
+		04020E4C1B29D14500FDD35A /* PawButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PawButton.swift; sourceTree = "<group>"; };
+		04020E4E1B29E0EE00FDD35A /* cloud_floor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_floor.png; sourceTree = "<group>"; };
+		04020E501B29EC4600FDD35A /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		04DB16DC1B2729D200FCA436 /* StuffedAnimalMortalKombatMultiPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StuffedAnimalMortalKombatMultiPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DB16E01B2729D200FCA436 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04DB16E11B2729D200FCA436 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				04DB16E31B2729D300FCA436 /* GameScene.sks */,
+				04020E4E1B29E0EE00FDD35A /* cloud_floor.png */,
 				04DB16E51B2729D300FCA436 /* GameScene.swift */,
 			);
 			name = Game;
@@ -140,6 +151,7 @@
 		04DB170F1B273C7800FCA436 /* Random */ = {
 			isa = PBXGroup;
 			children = (
+				04020E501B29EC4600FDD35A /* Functions.swift */,
 				04DB170D1B273C6900FCA436 /* Connector.swift */,
 			);
 			name = Random;
@@ -149,7 +161,10 @@
 			isa = PBXGroup;
 			children = (
 				04DB170B1B273B8000FCA436 /* UserControllerViewController.swift */,
+				04020E4A1B29C7E500FDD35A /* PawIcon.png */,
 				04DB171F1B2873B200FCA436 /* Avatar.swift */,
+				04020E481B29C35200FDD35A /* MoveButton.swift */,
+				04020E4C1B29D14500FDD35A /* PawButton.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -238,7 +253,9 @@
 				04DB16ED1B2729D300FCA436 /* Images.xcassets in Resources */,
 				04DB16E41B2729D300FCA436 /* GameScene.sks in Resources */,
 				04DB16EB1B2729D300FCA436 /* iPadMain.storyboard in Resources */,
+				04020E4F1B29E0EE00FDD35A /* cloud_floor.png in Resources */,
 				04DB17071B272C6600FCA436 /* iPhoneMain.storyboard in Resources */,
+				04020E4B1B29C7E500FDD35A /* PawIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +274,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				04DB17201B2873B200FCA436 /* Avatar.swift in Sources */,
+				04020E491B29C35200FDD35A /* MoveButton.swift in Sources */,
+				04020E511B29EC4600FDD35A /* Functions.swift in Sources */,
 				04DB16E61B2729D300FCA436 /* GameScene.swift in Sources */,
 				04DB16E81B2729D300FCA436 /* GameViewController.swift in Sources */,
 				04DB16E21B2729D200FCA436 /* AppDelegate.swift in Sources */,
 				04DB170E1B273C6900FCA436 /* Connector.swift in Sources */,
+				04020E4D1B29D14500FDD35A /* PawButton.swift in Sources */,
 				04DB170C1B273B8000FCA436 /* UserControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
