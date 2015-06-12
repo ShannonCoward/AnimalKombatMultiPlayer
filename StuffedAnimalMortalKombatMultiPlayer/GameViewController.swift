@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import MultipeerConnectivity
 
 extension SKNode {
     class func unarchiveFromFile(file : String) -> SKNode? {
@@ -26,14 +27,18 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
+    
+    var scene: GameScene?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Connector.sharedConnector().gameBoard = self
         Connector.sharedConnector().startBrowsing()
-
-        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+        
+        scene = GameScene.unarchiveFromFile("GameScene") as? GameScene
+        
+        if let  scene = scene {
             // Configure the view.
             let skView = self.view as! SKView
             skView.showsFPS = true
@@ -49,23 +54,87 @@ class GameViewController: UIViewController {
         }
     }
     
-    func playerJoined() {
+    var playerViews: [PlayerStats] = []
+        
+    func playerJoined(peerID: MCPeerID) {
+        
+        println("player Joined" + peerID.displayName)
+        
+        if let playerVC = storyboard?.instantiateViewControllerWithIdentifier("playerStats") as? UIViewController {
+        
+            let playerView = playerVC.view as! PlayerStats
+            
+            playerView.nameLabel.text = peerID.displayName
+            
+            playerViews.append(playerView)
+            
+            scene?.playerJoined(peerID.displayName)
+        
+        }
+        
+    
+            layouPlayStats()
+            
+      
         
         //add stats area
-        
         
         
         // add player sprite node
         
     }
     
-    func playerLeft() {
+    func playerLeft(peeID: MCPeerID) {
         
-        //remove stats area & update stats layout if stats area was not at end
+        var foundPlayerViewIndex: Int?
         
-        // remove player sprite mode (possibley by exploding them)
+        for (p,playerView) in enumerate(playerViews) {
+            
+            if let name = playerView.nameLabel.text, peerName = peeID.displayName where name == peerName {
+            
+                foundPlayerViewIndex = p
+                scene?.playerLeft(name)
+            
+            }
+            
+            
+            
+        }
+        
+        for playerView in playerViews {  playerView.removeFromSuperview()}
+        
+        if let foundPlayerViewIndex = foundPlayerViewIndex {
+            
+            
+            playerViews.removeAtIndex(foundPlayerViewIndex)
+        
+         
+        }
+        
+       
+            layouPlayStats()
+        
     }
     
+    func layouPlayStats() {
+        
+        let padding: CGFloat = 20
+        let maxPlayers: CGFloat = 4
+        
+        let playerStatsWidth = (view.frame.width - (padding * (maxPlayers + 1))) / maxPlayers
+        
+        for (p,playerView) in enumerate(playerViews) {
+        
+            view.addSubview(playerView)
+            
+            let x = (playerStatsWidth + padding) * CGFloat(p) + padding
+            
+            playerView.frame = CGRectMake(padding, padding, playerStatsWidth, 300)
+            
+            println(playerView)
+        }
+        
+    }
 
     override func shouldAutorotate() -> Bool {
         return true

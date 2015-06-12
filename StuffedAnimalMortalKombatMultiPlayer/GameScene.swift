@@ -19,47 +19,78 @@ class GameScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         
-     
         
         playerStatsWidth = (view.bounds.width -  (statsPadding * (playerCount + 1))) / playerCount
         
-//        
-//       ////////// /* Setup your scene here */////////
-//        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-//        myLabel.text = "Hello, World!";
-//        myLabel.fontSize = 65;
-//        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-//        
-//        self.addChild(myLabel)
+        Connector.sharedConnector().gameScene = self
     }
     
     
+    func playerJoined(name: String) {
+        
+        var playerNode = PlayerNode(color: UIColor.blackColor(),size: CGSizeMake(40, 40))
+        
+        playerNode.name = name
+        playerNode.position = CGPointMake(500, 500)
+        
+        playerNode.physicsBody = SKPhysicsBody(rectangleOfSize: playerNode.size)
+        
+        addChild(playerNode)
     
-        //
+    }
+    
+    func playerLeft(name:String) {
+    
+        if let playerNode = childNodeWithName(name) {
+            
+            playerNode.removeFromParent()
+        
+        
+        }
+        
+    }
+    
+    func playerJump(name: String){
+        
+        for node in children as! [SKNode]{
+        
+            if let playerNode = childNodeWithName(name) {
+                
+                playerNode.physicsBody?.applyImpulse(CGVectorMake(0.0, 20.0))
+        
+          }
+        
+      
+        }
+    
+    }
+    
+    
+    func playerMove(name: String, withDirection direction: Int) {
+        
+        
+    }
+    
+    func playerStop(name: String){
+    
+    
+    
+    }
+    
+
     
         var sunRotation: Double = 0
     
         override func update(currentTime: CFTimeInterval) {
-            /* Called before each frame is rendered */
-    
-            if let sun = childNodeWithName("sun") {
-    
-    //     let radBius = DistanceBetweenPoint1(sun.position, andPoint2: view!.center)
-    
-                let radius: CGFloat = 700
-    
-                sunRotation = sunRotation < 360 ? sunRotation + 1 : 0
-    
-                let angle =  CGFloat(DegreesToRadians(sunRotation))
-    
-    //            let x = (position.x / 2) + radius * cos(angle)
-    //            let y = (position.y + radius * sin(angle)
-    
-                sun.position.x = position.x + radius * cos(angle) + view!.center.x
-                sun.position.y = position.y + radius * sin(angle) + view!.center.y
-    
-    //            sun.position.x+=5 //x++ //<==Move to the right 1 space
+   
             }
         }
+    
+    class PlayerNode: SKSpriteNode {
+    
+//        var name: String!
+        
 
-}
+    }
+
+

@@ -3,6 +3,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Cute Cartoon.ttf">
+            <string>CuteCartoon</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -30,35 +35,139 @@
                         <viewControllerLayoutGuide type="top" id="htv-VC-P0U"/>
                         <viewControllerLayoutGuide type="bottom" id="QEE-lE-6xe"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QUb-Vp-dJu">
+                    <view key="view" contentMode="scaleToFill" id="QUb-Vp-dJu" customClass="PlayerStats" customModule="StuffedAnimalMortalKombatMultiPlayer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G5B-oi-cWj">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5B-oi-cWj" customClass="StatsBar" customModule="StuffedAnimalMortalKombatMultiPlayer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="10"/>
-                                <color key="backgroundColor" red="0.66953326570000005" green="0.65098039220000004" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="3bm-PG-N69"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="points">
+                                        <real key="value" value="26"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fullColor">
+                                        <color key="value" red="0.80408638720000003" green="0.12897756699999999" blue="0.1414926946" alpha="1" colorSpace="deviceRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                        <color key="value" red="0.66953326570000005" green="0.65098039220000004" blue="0.94509803920000002" alpha="0.71999999999999997" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="THA-uc-fCM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="THA-uc-fCM" customClass="StatsBar" customModule="StuffedAnimalMortalKombatMultiPlayer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="18" width="200" height="10"/>
-                                <color key="backgroundColor" red="0.95580838010000002" green="0.79428151599999997" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="points">
+                                        <real key="value" value="55"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fullColor">
+                                        <color key="value" red="0.94509804249999996" green="0.0072900336539999996" blue="0.2054001349" alpha="0.63" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
+                                        <color key="value" red="0.15807526990000001" green="0.7885742188" blue="0.79025328159999997" alpha="1" colorSpace="deviceRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2YZ-QK-JOZ">
-                                <rect key="frame" x="142" y="36" width="58" height="22"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3a6-W6-wgn">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3a6-W6-wgn" customClass="StatsKills" customModule="StuffedAnimalMortalKombatMultiPlayer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="66" width="200" height="234"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="killCount">
+                                        <integer key="value" value="39"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.74998372793197632" green="0.099814001716833842" blue="0.47045961161982264" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="killsPerLine">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duke" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20d-aC-Ws5">
-                                <rect key="frame" x="0.0" y="28" width="125" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duke" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20d-aC-Ws5">
+                                <rect key="frame" x="0.0" y="35" width="97" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="9QC-8D-vW4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CuteCartoon" family="Cute Cartoon" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2YZ-QK-JOZ" customClass="StatsLives" customModule="StuffedAnimalMortalKombatMultiPlayer" customModuleProvider="target">
+                                <rect key="frame" x="110" y="36" width="90" height="18"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="OLn-Jr-7f8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lifeCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.15807526990000001" green="0.7885742188" blue="0.79025328159999997" alpha="1" colorSpace="deviceRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3a6-W6-wgn" firstAttribute="top" secondItem="20d-aC-Ws5" secondAttribute="bottom" constant="6" id="0dI-Yd-JAv"/>
+                            <constraint firstAttribute="bottom" secondItem="3a6-W6-wgn" secondAttribute="bottom" id="1F2-sy-bSH"/>
+                            <constraint firstAttribute="trailing" secondItem="2YZ-QK-JOZ" secondAttribute="trailing" id="6I2-IY-lKU"/>
+                            <constraint firstItem="G5B-oi-cWj" firstAttribute="top" secondItem="htv-VC-P0U" secondAttribute="bottom" id="BEy-0O-OFN"/>
+                            <constraint firstItem="THA-uc-fCM" firstAttribute="top" secondItem="G5B-oi-cWj" secondAttribute="bottom" constant="8" id="BxT-oE-UeC"/>
+                            <constraint firstItem="G5B-oi-cWj" firstAttribute="top" secondItem="QUb-Vp-dJu" secondAttribute="top" id="CC6-Cy-JeN"/>
+                            <constraint firstItem="3a6-W6-wgn" firstAttribute="top" secondItem="2YZ-QK-JOZ" secondAttribute="bottom" constant="12" id="GDl-bH-ht1"/>
+                            <constraint firstAttribute="trailing" secondItem="3a6-W6-wgn" secondAttribute="trailing" id="Hps-M7-ZJU"/>
+                            <constraint firstAttribute="trailing" secondItem="20d-aC-Ws5" secondAttribute="trailing" constant="103" id="MfU-kN-VjN"/>
+                            <constraint firstItem="3a6-W6-wgn" firstAttribute="top" secondItem="20d-aC-Ws5" secondAttribute="bottom" constant="6" id="SPi-e4-kBG"/>
+                            <constraint firstItem="3a6-W6-wgn" firstAttribute="leading" secondItem="QUb-Vp-dJu" secondAttribute="leading" id="Tje-Pj-h4q"/>
+                            <constraint firstItem="2YZ-QK-JOZ" firstAttribute="top" secondItem="THA-uc-fCM" secondAttribute="bottom" constant="8" id="Y7c-6X-28h"/>
+                            <constraint firstItem="G5B-oi-cWj" firstAttribute="leading" secondItem="QUb-Vp-dJu" secondAttribute="leading" id="aWT-gf-pS8"/>
+                            <constraint firstItem="20d-aC-Ws5" firstAttribute="top" secondItem="QUb-Vp-dJu" secondAttribute="top" constant="35" id="brA-vV-it0"/>
+                            <constraint firstAttribute="trailing" secondItem="3a6-W6-wgn" secondAttribute="trailing" id="coS-yq-O7I"/>
+                            <constraint firstItem="QEE-lE-6xe" firstAttribute="top" secondItem="3a6-W6-wgn" secondAttribute="bottom" id="f99-ZF-Far"/>
+                            <constraint firstItem="3a6-W6-wgn" firstAttribute="top" secondItem="2YZ-QK-JOZ" secondAttribute="bottom" constant="12" id="hMS-77-2fV"/>
+                            <constraint firstItem="2YZ-QK-JOZ" firstAttribute="leading" secondItem="QUb-Vp-dJu" secondAttribute="leading" constant="110" id="nTl-9v-gQJ"/>
+                            <constraint firstAttribute="trailing" secondItem="G5B-oi-cWj" secondAttribute="trailing" id="oc2-2Z-kZJ"/>
+                            <constraint firstItem="3a6-W6-wgn" firstAttribute="leading" secondItem="QUb-Vp-dJu" secondAttribute="leading" id="qnp-HL-qOZ"/>
+                            <constraint firstItem="20d-aC-Ws5" firstAttribute="top" secondItem="THA-uc-fCM" secondAttribute="bottom" constant="7" id="rYg-Dw-EBs"/>
+                            <constraint firstAttribute="trailing" secondItem="THA-uc-fCM" secondAttribute="trailing" id="tnx-97-iiA"/>
+                            <constraint firstItem="THA-uc-fCM" firstAttribute="leading" secondItem="QUb-Vp-dJu" secondAttribute="leading" id="uFC-Ee-XS5"/>
+                            <constraint firstItem="20d-aC-Ws5" firstAttribute="leading" secondItem="QUb-Vp-dJu" secondAttribute="leading" id="veq-jj-mVM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BEy-0O-OFN"/>
+                                <exclude reference="0dI-Yd-JAv"/>
+                                <exclude reference="Hps-M7-ZJU"/>
+                                <exclude reference="hMS-77-2fV"/>
+                                <exclude reference="qnp-HL-qOZ"/>
+                                <exclude reference="f99-ZF-Far"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outlet property="energyBar" destination="G5B-oi-cWj" id="N4h-Sd-DiS"/>
+                            <outlet property="healthBar" destination="THA-uc-fCM" id="x8j-oa-v2c"/>
+                            <outlet property="killStats" destination="3a6-W6-wgn" id="ciF-SX-frW"/>
+                            <outlet property="livesStats" destination="2YZ-QK-JOZ" id="LCb-Gi-bbv"/>
+                            <outlet property="nameLabel" destination="20d-aC-Ws5" id="GQa-Wf-zha"/>
+                            <outlet property="playerName" destination="20d-aC-Ws5" id="tAm-Y4-thf"/>
+                            <outlet property="statsKills" destination="3a6-W6-wgn" id="NZR-sj-kqn"/>
+                            <outlet property="statsLives" destination="2YZ-QK-JOZ" id="eFM-jJ-FAr"/>
+                        </connections>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="200" height="300"/>
                 </viewController>
