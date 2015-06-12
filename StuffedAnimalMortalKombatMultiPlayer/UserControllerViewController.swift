@@ -38,7 +38,7 @@ class UserControllerViewController: UIViewController {
 
     @IBAction func pressedUp(sender: AnyObject) {
         
-        let info = [ "action":"jump" ]
+        let info = [ "action":"jump"]
         
         if let data = NSJSONSerialization.dataWithJSONObject(info, options: NSJSONWritingOptions.allZeros, error: nil) {
             

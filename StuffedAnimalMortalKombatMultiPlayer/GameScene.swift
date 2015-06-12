@@ -35,6 +35,16 @@ class GameScene: SKScene {
         
         playerNode.physicsBody = SKPhysicsBody(rectangleOfSize: playerNode.size)
         
+        if let info = Connector.sharedConnector().playersInfo[name] as? [String: AnyObject] {
+            
+            if let color = info["color"] as? UIColor {
+            
+                playerNode.color = color
+            
+            }
+        
+        }
+        
         addChild(playerNode)
     
     }

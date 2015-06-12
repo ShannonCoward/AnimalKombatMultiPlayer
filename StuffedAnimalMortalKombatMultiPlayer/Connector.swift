@@ -26,7 +26,13 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
     
     var worldID: MCPeerID?
     
+    var playersInfo: [String: AnyObject] = [:]
+    
     var myInfo: [String:AnyObject] = [:]
+    
+//        "color" : UIColor(red: 0.16, green: 0.96, blue: 0.31, alpha: 1)
+//    
+//    ]
     
     var gameBoard: GameViewController?
     var gameScene: GameScene?
@@ -65,6 +71,8 @@ class Connector: NSObject, MCSessionDelegate, MCNearbyServiceAdvertiserDelegate,
         
             println("found" + peerID.displayName)
             println("found \(info)")
+        
+        playersInfo[peerID.displayName] = info
         
         //INVITING THE PPER
         browser.invitePeer(peerID, toSession: session, withContext: nil, timeout: 30)
