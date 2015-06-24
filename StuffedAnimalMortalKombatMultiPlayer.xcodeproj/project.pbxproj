@@ -109,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				04DB170F1B273C7800FCA436 /* Random */,
-				04DB16E91B2729D300FCA436 /* iPadMain.storyboard */,
 				04DB16E71B2729D300FCA436 /* GameViewController.swift */,
 				04DB170A1B273B2D00FCA436 /* Game */,
 				04DB171E1B28737900FCA436 /* Controller */,
@@ -159,6 +158,7 @@
 				043756C11B2B1691008CDDAB /* StatsBar.swift */,
 				043756BB1B2B166B008CDDAB /* PlayerStats.swift */,
 				04DB16E51B2729D300FCA436 /* GameScene.swift */,
+				04DB16E91B2729D300FCA436 /* iPadMain.storyboard */,
 			);
 			name = Game;
 			sourceTree = "<group>";

@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>C90A797E-33EF-4742-A9FC-E48242532908</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>StuffedAnimalMortalKombatMultiPlayer</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>CA47F594571F504B9872EBD6D842119AFEA0C502</key>
 		<string>https://github.com/ShannonArmon/AnimalKombatMultiPlayer.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>StuffedAnimalMortalKombatMultiPlayer.xcodeproj/project.xcworkspace</string>
+	<string>StuffedAnimalMortalKombatMultiPlayer.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>CA47F594571F504B9872EBD6D842119AFEA0C502</key>
